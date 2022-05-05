@@ -1,0 +1,25 @@
+.containerLogin {
+    height: 100%;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.titleLogin {
+    text-align: center;
+    color: white !important;
+}
+
+.buttonLogin {
+    width: 100%;
+    margin-bottom: 10px !important;
+}
+
+.ant-btn-default {
+    background: black;
+    border-color: black;
+}
+
+.ant-btn-background-ghost:hover {
+    background: white !important;
+    border-color: #e66465 !important;
+    color: #e66465 !important;
+}
