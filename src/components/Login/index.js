@@ -2,14 +2,24 @@ import React from "react";
 import { Row, Col, Button, Typography } from "antd";
 import { GooglePlusOutlined, FacebookOutlined } from "@ant-design/icons";
 import firebase, { auth } from "../../firebase/confiq";
+import { addDocument } from "../../firebase/service";
 import "./styles.css";
 
 const { Title } = Typography;
 const fbProvider = new firebase.auth.FacebookAuthProvider();
 
 function Login() {
-  const handleFBLogin = () => {
-    auth.signInWithPopup(fbProvider);
+  const handleFBLogin = async () => {
+    const { additionalUserInfo, user } = await auth.signInWithPopup(fbProvider);
+    if (additionalUserInfo?.isNewUser) {
+      addDocument("users", {
+        displayName: user.displayName,
+        email: user.email,
+        photoURL: user.photoURL,
+        uid: user.uid,
+        providerId: additionalUserInfo.providerId,
+      });
+    }
   };
 
   return (

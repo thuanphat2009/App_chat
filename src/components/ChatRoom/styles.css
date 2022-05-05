@@ -1,0 +1,26 @@
+.ant-image-mask {
+    border-radius: 50%;
+    background-color: unset
+}
+
+.ant-image-img {
+    width: 30px
+}
+
+.ant-image-mask-info {
+    display: none !important
+}
+
+.nameHeader {
+    margin-bottom: 0;
+    color: white
+}
+
+.nameHeader span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.ant-avatar {
+    width: 110px;
+}
