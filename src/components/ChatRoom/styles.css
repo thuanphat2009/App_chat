@@ -24,3 +24,25 @@
 .ant-avatar {
     width: 110px;
 }
+
+.sideBar {
+    background-color: #80808026;
+    height: 90vh;
+}
+
+.sidebarRoom {
+    display: block;
+    margin-bottom: 5px;
+    color: black !important;
+    padding: 10px
+}
+
+.sidebarRoom:hover {
+    background-color: #80808026;
+    border-radius: 10px;
+}
+
+.sidebarBtn {
+    color: black !important;
+    padding: 0 6px;
+}
